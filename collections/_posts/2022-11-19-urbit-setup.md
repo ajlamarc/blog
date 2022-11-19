@@ -64,11 +64,35 @@ If it requests to remove git files, say yes.  Likewise:
 ```bash
 ~/urbit/hue$ cd desk/ && rm -r .git/
 ```
-Now back in our home directory, configure `zod` to recognize a `hue` desk:
+Now configure `zod` to recognize a `hue` desk:
 ```bash
-~/urbit$ ./urbit zod
 ~zod:dojo> |commit %base
 ~zod:dojo> |new-desk %hue
 ~zod:dojo> |mount %hue
 ~zod:dojo> |exit
 ```
+We want our future changes inside `/hue/desk` to automatically be copied into the desk inside of `zod`, for ease of testing.  Leave this command running in the background:
+```bash
+~/urbit$ watch cp -LR hue/desk/* zod/hue/
+```
+One problem is that the skeleton agent is named `mine`, but we need it to reference `hue`.  Inside of the `/hue/desk` folder, rename mine to hue inside of the following files: desk.bill, desk.docket-0, mine.hoon.  Also, rename mine.hoon to hue.hoon.  These changes will automatically propagate to our zod.
+
+Now, let's get our new Gall agent running:
+```bash
+~zod:dojo> |commit %hue
+~zod:dojo> |install our %hue
+~zod:dojo> :hue +dbug
+```
+You should see a default state `[%0 ~]` printed as output from the agent.  Keeping zod running, start up the frontend:
+```bash
+~/urbit/hue/ui$ npm i && npm run dev
+```
+Visit http://localhost:3000/apps/grid/ to get started.  It will ask you to log in first.  The password can be gotten from zod by running `+code` in the dojo.  You should now be able to see and open the `hue` app!
+
+From here, testing changes is relatively easy: frontend changes should be hot-reloaded.  For changes on the hoon side, make sure to `|commit %hue` first.  To hard restart the Gall agent (useful for state changes):
+```bash
+~zod:dojo> |nuke %hue
+~zod:dojo> |rein %hue [& %hue]
+```
+
+Another post will cover final deployment steps onto the Urbit network.
