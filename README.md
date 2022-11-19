@@ -1,12 +1,15 @@
-# Jekyll Atlantic - Jekyll + Tailwind Starter Theme
+# Jekyll Atlantic - A Jekyll Tailwind Theme
 
-Atlantic is a beutiful minimal blog theme for Jekyll. It is an excellent Jekyll + Tailwind boilerplate to start from.
+Atlantic is a Jekyll Tailwind CSS theme. It shows best practices for using Tailwind with Jekyll.
 
-[Live Demo](https://jekyll-atlantic.netlify.app/) | [Zerostatic Themes](https://www.zerostatic.io/theme/jekyll-atlantic/)
+[Live Demo](https://jekyll-atlantic.netlify.app/) | 
+[Zerostatic Themes](https://www.zerostatic.io/theme/jekyll-atlantic/)
+
+<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ![Jekyll Atlantic Theme screenshot](https://www.zerostatic.io/theme/jekyll-atlantic/jekyll-atlantic-screenshot.png)
 
-## Theme features
+### Theme features
 
 <img width="18" height="18" src="https://jamstackthemes.dev/images/icons/jekyll.svg" /> [Jekyll](https://jekyllrb.com/) 4.1+
 <img width="18" height="18" src="https://jamstackthemes.dev/images/icons/tailwind.svg" /> [Tailwind CSS](https://tailwindcss.com/docs) v2.2+
@@ -93,11 +96,7 @@ For example the site https://zerostaticthemes.github.io/jekyll-atlantic-theme wo
 
 ### Other Jekyll Themes by Zerostatic
 
-- [Jekyll Serif](https://github.com/zerostaticthemes/jekyll-serif-theme) - Open Source
-- [Jekyll Advance](https://www.zerostatic.io/theme/jekyll-advance/) - Premium
-- [Jekyll Curate](https://github.com/zerostaticthemes/jekyll-curate) - Premium
-- [Jekyll Origin](https://www.zerostatic.io/theme/jekyll-origin/) - Premium
+- [Jekyll Serif](https://github.com/zerostaticthemes/jekyll-serif-theme)
+- [Jekyll Advance](https://www.zerostatic.io/theme/jekyll-advance/)
 
 🇦🇺 **Made in Australia** by Robert Austin - Support our work - **Star this repo** ⭐
-
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
