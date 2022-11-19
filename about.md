@@ -9,4 +9,4 @@ image:
 
 Learning system design, UI/UX, and Hoon.
 
-[Twitter](https://twitter.com/ajlamarc)  |  [Linkedin](https://www.linkedin.com/in/ajlamarc/)  |  [Urbit](https://urbit.org/ids/~larryx-woldyr)
+[Twitter](https://twitter.com/ajlamarc)  [Linkedin](https://www.linkedin.com/in/ajlamarc/)  [Urbit](https://urbit.org/ids/~larryx-woldyr)

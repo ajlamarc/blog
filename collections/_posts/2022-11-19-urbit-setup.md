@@ -77,11 +77,11 @@ We want our future changes inside `/hue/desk` to automatically be copied into th
 ~/urbit$ watch cp -LR hue/desk/* zod/hue/
 ```
 One problem is that the skeleton agent is named `mine`, but we need it to reference `hue`.  Inside of the `/hue/desk` folder:
-- replace references to `mine` with `hue`: these should be in desk.bill, desk.docket-0, and mine.hoon
-- inside desk.docket-0, make sure it says `base+'hue'`
+- replace all references to `mine` with `hue`: these should be in desk.bill, desk.docket-0, and mine.hoon
+- inside desk.docket-0, remove `site+/apps/mine` and replace it with `glob-http+['https://bootstrap.urbit.org/glob-0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o.glob' 0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o]`. Also, add `base+'hue'`.
 - rename mine.hoon to hue.hoon
-These changes will automatically propagate to our zod, thanks to the watch command.
 
+These changes will automatically propagate to our zod, thanks to the watch command.
 Now, let's get our new Gall agent running:
 ```hoon
 ~zod:dojo> |commit %hue
