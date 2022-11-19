@@ -27,11 +27,11 @@ Boot a new fakezod using the developer pill (this takes a few minutes):
 ```bash
 ~/urbit$ ./urbit -B dev-latest.pill -F zod
 ```
-As of now (11/19/2022) the `|new-desk` command hasn't been released yet, so we will add it manually to the `%base` desk files.
 ```hoon
 ~zod:dojo> |mount %base
 ~zod:dojo> |exit
 ```
+As of now (11/19/2022) the `|new-desk` command hasn't been released yet, so we will add it manually to the `%base` desk files.
 ```bash
 ~/urbit$ cd zod/base/gen/hood/ && curl -O https://raw.githubusercontent.com/urbit/urbit/bad5013c8a008ccf37761fbff63e4b04c4fca95b/pkg/arvo/gen/hood/new-desk.hoon
 ```
@@ -76,7 +76,11 @@ We want our future changes inside `/hue/desk` to automatically be copied into th
 ```bash
 ~/urbit$ watch cp -LR hue/desk/* zod/hue/
 ```
-One problem is that the skeleton agent is named `mine`, but we need it to reference `hue`.  Inside of the `/hue/desk` folder, rename mine to hue inside of the following files: desk.bill, desk.docket-0, mine.hoon.  Also, rename mine.hoon to hue.hoon.  These changes will automatically propagate to our zod.
+One problem is that the skeleton agent is named `mine`, but we need it to reference `hue`.  Inside of the `/hue/desk` folder:
+- replace references to `mine` with `hue`: these should be in desk.bill, desk.docket-0, and mine.hoon
+- inside desk.docket-0, make sure it says `base+'hue'`
+- rename mine.hoon to hue.hoon
+These changes will automatically propagate to our zod, thanks to the watch command.
 
 Now, let's get our new Gall agent running:
 ```hoon
