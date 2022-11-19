@@ -23,15 +23,16 @@ Download the latest developer pill:
 ```bash
 ~/urbit$ curl -O https://storage.googleapis.com/media.urbit.org/developers/dev-latest.pill
 ```
-Boot a new fakezod using the developer pill:
+Boot a new fakezod using the developer pill (this takes a few minutes):
 ```bash
 ~/urbit$ ./urbit -B dev-latest.pill -F zod
 ```
 As of now (11/19/2022) the `|new-desk` command hasn't been released yet, so we will add it manually to the `%base` desk files.
-```bash
+```hoon
 ~zod:dojo> |mount %base
 ~zod:dojo> |exit
-
+```
+```bash
 ~/urbit$ cd zod/base/gen/hood/ && curl -O https://raw.githubusercontent.com/urbit/urbit/bad5013c8a008ccf37761fbff63e4b04c4fca95b/pkg/arvo/gen/hood/new-desk.hoon
 ```
 These first steps only need to be done once.  We can backup our ship now to make restarting from here easy:
@@ -65,7 +66,7 @@ If it requests to remove git files, say yes.  Likewise:
 ~/urbit/hue$ cd desk/ && rm -r .git/
 ```
 Now configure `zod` to recognize a `hue` desk:
-```bash
+```hoon
 ~zod:dojo> |commit %base
 ~zod:dojo> |new-desk %hue
 ~zod:dojo> |mount %hue
@@ -78,7 +79,7 @@ We want our future changes inside `/hue/desk` to automatically be copied into th
 One problem is that the skeleton agent is named `mine`, but we need it to reference `hue`.  Inside of the `/hue/desk` folder, rename mine to hue inside of the following files: desk.bill, desk.docket-0, mine.hoon.  Also, rename mine.hoon to hue.hoon.  These changes will automatically propagate to our zod.
 
 Now, let's get our new Gall agent running:
-```bash
+```hoon
 ~zod:dojo> |commit %hue
 ~zod:dojo> |install our %hue
 ~zod:dojo> :hue +dbug
@@ -87,10 +88,10 @@ You should see a default state `[%0 ~]` printed as output from the agent.  Keepi
 ```bash
 ~/urbit/hue/ui$ npm i && npm run dev
 ```
-Visit http://localhost:3000/apps/grid/ to get started.  It will ask you to log in first.  The password can be gotten from zod by running `+code` in the dojo.  You should now be able to see and open the `hue` app!
+Open `http://localhost:3000/apps/grid/`.  When prompted for a password, type `+code` into the dojo to retrieve it.  After signing in, you should now be able to see and open the `hue` app!
 
-From here, testing changes is relatively easy: frontend changes should be hot-reloaded.  For changes on the hoon side, make sure to `|commit %hue` first.  To hard restart the Gall agent (useful for state changes):
-```bash
+From here, testing changes is relatively easy: frontend changes will be hot-reloaded.  For changes on the hoon side, make sure to `|commit %hue`.  To hard restart the Gall agent (useful for state changes):
+```hoon
 ~zod:dojo> |nuke %hue
 ~zod:dojo> |rein %hue [& %hue]
 ```
