@@ -49,7 +49,7 @@ cc [Solid Project](https://solidproject.org/), [MetaMask](https://metamask.io/),
 
 [Common Objections](https://urbit.org/blog/common-objections-to-urbit) — An older post addressing some of Urbit's common critiques.
 
-[Why Web3 Needs Urbit](https://medium.com/chorus-one/why-web3-needs-urbit-dfcaaf75e0a8), [Urbit and Crypto Synergies](https://medium.com/chorus-one/urbit-and-crypto-synergies-4eb47cffb5d), [Uqbar, Urbit's ZK Rollup](https://medium.com/chorus-one/uqbar-a-unified-execution-environment-for-on-chain-and-off-chain-data-6d5e853abad4)
+[Why Web3 Needs Urbit](https://medium.com/chorus-one/why-web3-needs-urbit-dfcaaf75e0a8), [Urbit and Crypto Synergies](https://medium.com/chorus-one/urbit-and-crypto-synergies-4eb47cffb5d), [Uqbar: Urbit's ZK Rollup](https://medium.com/chorus-one/uqbar-a-unified-execution-environment-for-on-chain-and-off-chain-data-6d5e853abad4)
 — A lengthy 3-part series on Urbit, it's Web3 synergies, and Uqbar, the rollup bringing
 smart contract execution directly into the Urbit environment.
 
