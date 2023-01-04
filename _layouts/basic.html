@@ -21,6 +21,9 @@ body_classes: page-basic
     <div class="prose">
       {{ content }}
     </div>
+    {% if page.urbit %}
+      <iframe src=https://planet.one/embed/ecndlobcna?textColor=black&bgColor=white&accentColor=%234bc8a7></iframe>
+    {% endif %}
   </div>
 
 </div>
@@ -34,8 +37,4 @@ body_classes: page-basic
       {% endfor %}
     </div>
   </div>
-{% endif %} 
-
-{% if page.urbit %}
-  <iframe src=https://planet.one/embed/ecndlobcna?textColor=black&accentColor=%234bc8a7></iframe>
 {% endif %}
