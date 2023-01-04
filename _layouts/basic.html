@@ -15,7 +15,7 @@ body_classes: page-basic
   </div>
 {% endif %}
 
-<div class="flex flex-col md:flex-row py-6 md:py-12">
+<div class="flex flex-col py-6 md:flex-row md:py-12">
 
   <div class="w-full mx-auto md:w-9/12">
     <div class="prose">
@@ -26,8 +26,8 @@ body_classes: page-basic
 </div>
 
 {% if page.categories %}
-  <div class="py-6 mt-6 border-t-2 block md:hidden">
-    <h3 class="text-sm font-medium mb-1">Categories</h3>
+  <div class="block py-6 mt-6 border-t-2 md:hidden">
+    <h3 class="mb-1 text-sm font-medium">Categories</h3>
     <div>
       {% for category in page.categories %}
         {% include category-badge.html %}
@@ -35,3 +35,6 @@ body_classes: page-basic
     </div>
   </div>
 {% endif %} 
+
+{% if page.urbit %}
+<iframe src=https://planet.one/embed/ecndlobcna?textColor=black&accentColor=%234bc8a7></iframe>

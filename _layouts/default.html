@@ -12,10 +12,10 @@
   </head>
   <body class="page {{page.bodyClass}}">
     {% include mobile-menu.html %}
-    <iframe src="https://planet.one/embed/ecndlobcna?textColor=black&accentColor=%234bc8a7"></iframe>
     <div class="container px-6 mx-auto md:px-4">
       {% include header.html %}
       {{content}}
+      {% include footer.html %}
     </div>
     {% include google-analytics.html %}
     <script type="text/javascript" src="{{ '/assets/js/hamburger.js' | relative_url }}"></script>
