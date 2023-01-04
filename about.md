@@ -8,7 +8,7 @@ image:
 urbit: True
 ---
 
-Learning system design, UI/UX, and Hoon. Reach me at `~larryx-woldyr`.
+Learning system design, UI/UX, and Hoon. Reach me at `~larryx-woldyr` or on [Twitter](https://twitter.com/ajlamarc/).
 
 Want to get on Urbit? Courtesy of Tirrel, I am offering one-click hosting and onboarding
 for your own Urbit planet starting at $15/mo. Choose a planet name below:
